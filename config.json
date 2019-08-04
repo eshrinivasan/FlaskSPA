@@ -1,0 +1,27 @@
+{
+  "url": "https://webdev-wonder.herokuapp.com/",
+  "server": {
+    "port": process.env.PORT,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "client": "postgres",
+    "connection": {
+      "host": process.env.POSTGRES_HOST,
+      "user": process.env.POSTGRES_USER,
+      "password": process.env.POSTGRES_PASSWORD,
+      "database": process.env.POSTGRES_DATABASE,
+      "port": "5432"
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": ["file", "stdout"]
+  },
+  "process": "local",
+  "paths": {
+    "contentPath": "/Users/i335240/sap/creative/ghost-blog/content"
+  }
+}
