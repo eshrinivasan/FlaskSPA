@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block script %}
+  <script>
+    function addSubmit(ev) {
+      ev.preventDefault();
+      var request = new XMLHttpRequest();
+      request.addEventListener('load', addShow);
+      request.open('POST', {{ url_for('add')|tojson }});
+      request.send(new FormData(this));
+    }
+
+    function addShow() {
+      var span = document.getElementById('result');
+      span.innerText = this.responseText;
+    }
+
+    var form = document.getElementById('calc');
+    form.addEventListener('submit', addSubmit);
+  </script>
+{% endblock %}
