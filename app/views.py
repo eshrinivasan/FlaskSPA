@@ -1,6 +1,6 @@
 from flask import jsonify, render_template, request
 
-from js_example import app
+from app import app
 from pandas import read_excel
 import sys
 import requests 
